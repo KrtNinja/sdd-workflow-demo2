@@ -10,7 +10,7 @@ Dev Spec: [../spec.md](../spec.md). Статус: на ревью (checkpoint 2)
 | [004 Отказы передачи](004-transfer-refusals.md) | поведение | tasks-core + frontend | FR-5, FR-7 | 003 |
 | [005 Доступ после передачи](005-access-after-transfer.md) | поведение | tasks-core + frontend | FR-6, FR-11 (сервер) | 003 |
 | [006 Аудит передачи](006-audit.md) | поведение | tasks-core + audit | FR-13, NFR-3, NFR-4 | 001, 003 |
-| [007 Передача видна без перезагрузки](007-realtime-delivery.md) | поведение | tasks-core + socket-service + frontend | FR-9 (новый, руководитель), FR-12 | 001, 003 |
+| [007 Передача видна без перезагрузки](007-realtime-delivery.md) | поведение | tasks-core + socket-service + frontend | FR-9 (новый исполнитель, руководство), FR-12 | 001, 003 |
 | [008 Карточка закрывается](008-card-closes.md) | поведение | frontend | FR-9 (прежний), FR-10, FR-11 (клиент) | 004, 005, 007 |
 | [009 Порядок быстрых передач](009-transfer-order.md) | поведение | tasks-core + audit + socket-service + frontend | FR-14 | 006, 007, 008 |
 
