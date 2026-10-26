@@ -8,16 +8,29 @@ just-in-time в репозитории сервиса, когда зависим
 
 ## Следующий шаг: slice 001 «Контракты»
 
-Четыре Change, по одному в каждом репозитории, PR ревьюят все стороны вместе.
+Четыре Change, по одному в каждом репозитории. Каждый делает тот, кто берёт эту половину slice:
+вход у всех один (файл slice), содержимое разное — его пишут по коду своего репозитория.
+Сценарии ссылаются на AC-ID slice, нового поведения не добавляют. PR ревьюят все стороны вместе.
 
-| Репозиторий | Команда | Что появится в коде |
-|---|---|---|
-| tasks-core | `/opsx:propose 001-contracts по docs/task-transfer/slices/001-contracts.md` | openapi, схемы событий для audit и realtime, порт ProjectMembers, ошибки, fixtures |
-| socket-service | то же | контракт сообщения сокета |
-| audit | то же | подписка на схему события tasks-core |
-| frontend | то же | типы клиента из контрактов владельцев |
+В этом демо-репозитории папки сервисов изображают их репозитории:
 
-Затем в каждом репозитории `/opsx:apply`.
+| Репозиторий | Заглушка Change |
+|---|---|
+| tasks-core | [tasks-core/openspec/changes/001-contracts](../../tasks-core/openspec/changes/001-contracts/README.md) |
+| socket-service | [socket-service/openspec/changes/001-contracts](../../socket-service/openspec/changes/001-contracts/README.md) |
+| audit | [audit/openspec/changes/001-contracts](../../audit/openspec/changes/001-contracts/README.md) |
+| frontend | [frontend/openspec/changes/001-contracts](../../frontend/openspec/changes/001-contracts/README.md) |
+
+В каждом: `/opsx:propose 001-contracts по <slice 001>`, затем `/opsx:apply`.
+
+## Подсказка: откуда агент берёт slice
+
+Slice лежит в репозитории с доками, а Change создаётся в репозитории сервиса — там этого файла
+нет. Команде нужно выбрать один способ и записать его в AGENTS.md каждого сервиса:
+
+- **ссылка на файл в репозитории с доками** — `KrtNinja/sdd-workflow-demo2/docs/task-transfer/slices/001-contracts.md`;
+- **копия slice в репозиторий сервиса** на время работы — удаляется вместе с Change;
+- **общая папка docs**, подключённая ко всем репозиториям (submodule или монорепозиторий документации).
 
 ## Что вернётся сюда после мержа
 
