@@ -12,7 +12,7 @@
 - contracts/events/task-transferred.realtime.schema.json — НОВОЕ: событие для realtime-доставки (задача, прежний и новый исполнитель, адресаты, порядковый номер передачи по задаче)
 - contracts/socket/task-transferred.message.json — НОВОЕ: сообщение, которое клиент получает по сокету
 - tasks-core: application/ports/ProjectMembers.ts — НОВОЕ: порт к user-core (участники проекта, активность, роль, должность; ошибка «недоступно»)
-- tasks-core: domain/errors/TaskTransferErrors.ts — НОВОЕ: NOT_ASSIGNEE, TASK_CLOSED, RECIPIENT_NOT_ELIGIBLE, SELF_TRANSFER, INVALID_REASON, MEMBERS_UNAVAILABLE
+- tasks-core: domain/errors/TaskTransferErrors.ts — НОВОЕ: NOT_ASSIGNEE, TASK_CLOSED, RECIPIENT_NOT_ELIGIBLE, SELF_TRANSFER, INVALID_REASON, MEMBERS_UNAVAILABLE; TASK_TRANSFERRED — отказ при сохранении задачи, которую передали (без данных о получателе)
 - tests/fixtures/task-transfer.ts — НОВОЕ: данные ниже
 
 Сообщение о закрытии задачи (существующее, используется в FR-10) — не меняется, ссылка добавляется в индекс контрактов.
