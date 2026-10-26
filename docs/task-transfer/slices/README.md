@@ -6,7 +6,7 @@ Dev Spec: [../spec.md](../spec.md). Статус: на ревью (checkpoint 2)
 |---|---|---|---|---|
 | [001 Контракты](001-contracts.md) | подготовка | все | все | — |
 | [002 Поиск получателя](002-recipient-search.md) | поведение | tasks-core + frontend | FR-2, NFR-2 | 001 |
-| [003 Передача задачи](003-transfer.md) | поведение | tasks-core + frontend | FR-1, FR-3, FR-4, FR-8, NFR-1 | 001, 002 |
+| [003 Передача задачи](003-transfer.md) | поведение | tasks-core + frontend | FR-1, FR-3, FR-4, FR-5 (кнопка), FR-8, NFR-1 | 001, 002 |
 | [004 Отказы передачи](004-transfer-refusals.md) | поведение | tasks-core + frontend | FR-5, FR-7 | 003 |
 | [005 Доступ после передачи](005-access-after-transfer.md) | поведение | tasks-core + frontend | FR-6, FR-11 (сервер) | 003 |
 | [006 Аудит передачи](006-audit.md) | поведение | tasks-core + audit | FR-13, NFR-3, NFR-4 | 001, 003 |
@@ -21,7 +21,7 @@ Dev Spec: [../spec.md](../spec.md). Статус: на ревью (checkpoint 2)
 | FR-2 | 002 |
 | FR-3 | 003 |
 | FR-4 | 003 |
-| FR-5 | 004 |
+| FR-5 | 003 (кнопка), 004 (отказ сервера) |
 | FR-6 | 005 |
 | FR-7 | 003 (NOT_ASSIGNEE, INVALID_REASON), 004 (остальные) |
 | FR-8 | 003 |
