@@ -26,12 +26,13 @@ just-in-time в репозитории сервиса, когда зависим
 ## Пример: этап 7 на slice 003
 
 Две половины — два Change. Оба остановились на JIT-вопросе: при чтении кода всплыло то,
-чего нет в Dev Spec. Агент не решает сам, а спрашивает человека.
+чего нет в Dev Spec. Агент не решил сам, а спросил человека. Ответ прошёл путь
+Dev Spec → новая строка AC в slice → Change, и только после этого Change готов к `/opsx:apply`.
 
-| Репозиторий | Change | JIT-вопрос |
-|---|---|---|
-| tasks-core | [003-transfer](../../tasks-core/openspec/changes/003-transfer/README.md) | пробелы по краям причины: обрезать или хранить как есть |
-| frontend | [003-transfer](../../frontend/openspec/changes/003-transfer/README.md) | несохранённые правки в текущей вкладке при передаче |
+| Репозиторий | Change | JIT-вопрос | Решение | Куда попало |
+|---|---|---|---|---|
+| tasks-core | [003-transfer](../../tasks-core/openspec/changes/003-transfer/README.md) | пробелы по краям причины | хранить как ввели, длина с пробелами | FR-3 → AC-003-B6 |
+| frontend | [003-transfer](../../frontend/openspec/changes/003-transfer/README.md) | несохранённые правки в текущей вкладке | теряются без предупреждения | FR-8 → AC-003-F5 |
 
 ## Подсказка: откуда агент берёт slice
 
